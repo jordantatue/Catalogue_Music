@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZoO albums</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="container">
+<div class="modals">
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="thumbnail">
+                        <img class="image" src="" alt="">
+                        <div class="prize"></div>
+                        <div class="caption">
+                            <h4><span class="titre"></span> (<span class="annee"></span>)</h4>
+                            <p><i>Artiste: </i><b class="artist"></b></p>
+                            <p class="description"></p>
+                            <p><a class="btn btn-order" role="button" href="#">Acheter</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Full MuZic</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+                            <li role="presentation" data-genres="5" class="active">
+                    <a href="#5" data-toggle="tab">Blues</a>
+                </li>
+                            <li role="presentation" data-genres="4" >
+                    <a href="#4" data-toggle="tab">Jazz</a>
+                </li>
+                            <li role="presentation" data-genres="6" >
+                    <a href="#6" data-toggle="tab">R&B</a>
+                </li>
+                            <li role="presentation" data-genres="2" >
+                    <a href="#2" data-toggle="tab">Rap</a>
+                </li>
+                            <li role="presentation" data-genres="3" >
+                    <a href="#3" data-toggle="tab">Reggae</a>
+                </li>
+                            <li role="presentation" data-genres="1" >
+                    <a href="#1" data-toggle="tab">Rock</a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+<div class="tab-content">
+            <div class="tab-pane active" id="5">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues01.jpg" alt="A Decade of Hits 1969-1979">
+                            <div class="prize">4.99 €</div>
+                            <div class="caption">
+                                <h4>A Decade of Hits 1969-1979</h4>
+                                <p><i>Artiste: </i>The Allman Brothers Band</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="23">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues02.jpg" alt="The Very Best of">
+                            <div class="prize">5.99 €</div>
+                            <div class="caption">
+                                <h4>The Very Best of</h4>
+                                <p><i>Artiste: </i>Stevie Ray Vaughan</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="24">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues03.jpg" alt="The Best of B.B. King ">
+                            <div class="prize">5.99 €</div>
+                            <div class="caption">
+                                <h4>The Best of B.B. King </h4>
+                                <p><i>Artiste: </i>B.B. King </p>
+                                <button type="button" class="btn btn-order button-modal" data-album="25">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues04.jpg" alt="Live North America 2016">
+                            <div class="prize">11.99 €</div>
+                            <div class="caption">
+                                <h4>Live North America 2016</h4>
+                                <p><i>Artiste: </i>Gary Clark, Jr.</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="26">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues05.jpg" alt="The Anthology">
+                            <div class="prize">9.99 €</div>
+                            <div class="caption">
+                                <h4>The Anthology</h4>
+                                <p><i>Artiste: </i>Bobby "Blue" Bland</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="27">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/blues06.jpg" alt="At Last: The Best of">
+                            <div class="prize">9.99 €</div>
+                            <div class="caption">
+                                <h4>At Last: The Best of</h4>
+                                <p><i>Artiste: </i>Etta James</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="28">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+            <div class="tab-pane " id="4">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/jazz01.jpg" alt="Smooth Jazz Tribute">
+                            <div class="prize">10.99 €</div>
+                            <div class="caption">
+                                <h4>Smooth Jazz Tribute</h4>
+                                <p><i>Artiste: </i>Various Artists</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="19">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/jazz02.jpg" alt="Turn Up the Quiet">
+                            <div class="prize">13.99 €</div>
+                            <div class="caption">
+                                <h4>Turn Up the Quiet</h4>
+                                <p><i>Artiste: </i>Diana Krall</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="20">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/jazz03.jpg" alt="Send One Your Love">
+                            <div class="prize">9.99 €</div>
+                            <div class="caption">
+                                <h4>Send One Your Love</h4>
+                                <p><i>Artiste: </i>Boney James</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="21">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/jazz04.jpg" alt="Anthology">
+                            <div class="prize">9.99 €</div>
+                            <div class="caption">
+                                <h4>Anthology</h4>
+                                <p><i>Artiste: </i>Grover Washington, Jr.</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="22">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+            <div class="tab-pane " id="6">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/soul03.jpg" alt="The Very Best of">
+                            <div class="prize">5.99 €</div>
+                            <div class="caption">
+                                <h4>The Very Best of</h4>
+                                <p><i>Artiste: </i>Luther Vandross</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="29">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/soul04.jpg" alt="Respect M.E.">
+                            <div class="prize">7.99 €</div>
+                            <div class="caption">
+                                <h4>Respect M.E.</h4>
+                                <p><i>Artiste: </i>Missy Elliott</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="30">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/soul01.jpg" alt="S.O.U.L., Vol. 2">
+                            <div class="prize">4.99 €</div>
+                            <div class="caption">
+                                <h4>S.O.U.L., Vol. 2</h4>
+                                <p><i>Artiste: </i>Marvin Gaye</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="31">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/soul02.jpg" alt="I Will Always Love You">
+                            <div class="prize">7.99 €</div>
+                            <div class="caption">
+                                <h4>I Will Always Love You</h4>
+                                <p><i>Artiste: </i>Whitney Houston</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="32">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+            <div class="tab-pane " id="2">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rap01.jpg" alt="4:44">
+                            <div class="prize">13.99 €</div>
+                            <div class="caption">
+                                <h4>4:44</h4>
+                                <p><i>Artiste: </i>Jay-Z</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="7">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rap03.jpg" alt="Double or Nothing">
+                            <div class="prize">12.99 €</div>
+                            <div class="caption">
+                                <h4>Double or Nothing</h4>
+                                <p><i>Artiste: </i>Big Sean</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="9">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rap04.jpg" alt="Prophets of Rage">
+                            <div class="prize">13.99 €</div>
+                            <div class="caption">
+                                <h4>Prophets of Rage</h4>
+                                <p><i>Artiste: </i>Prophets of Rage</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="10">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rap05.jpg" alt="BooPac">
+                            <div class="prize">16.99 €</div>
+                            <div class="caption">
+                                <h4>BooPac</h4>
+                                <p><i>Artiste: </i>Boosie Badazz</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="11">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rap06.jpg" alt="Curtain Call: The Hits">
+                            <div class="prize">9.99 €</div>
+                            <div class="caption">
+                                <h4>Curtain Call: The Hits</h4>
+                                <p><i>Artiste: </i>Eminem</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="12">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+            <div class="tab-pane " id="3">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae01.jpg" alt="Legend">
+                            <div class="prize">11.99 €</div>
+                            <div class="caption">
+                                <h4>Legend</h4>
+                                <p><i>Artiste: </i>Bob Marley</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="13">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae02.jpg" alt="Roots of Reggae">
+                            <div class="prize">3.99 €</div>
+                            <div class="caption">
+                                <h4>Roots of Reggae</h4>
+                                <p><i>Artiste: </i>Various Artists</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="14">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae03.jpg" alt="Ziggy Marley">
+                            <div class="prize">11.99 €</div>
+                            <div class="caption">
+                                <h4>Ziggy Marley</h4>
+                                <p><i>Artiste: </i>Ziggy Marley</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="15">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae04.jpg" alt="Reincarnated">
+                            <div class="prize">6.99 €</div>
+                            <div class="caption">
+                                <h4>Reincarnated</h4>
+                                <p><i>Artiste: </i>Snoop Lion</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="16">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae05.jpg" alt="The Universal Cure">
+                            <div class="prize">11.99 €</div>
+                            <div class="caption">
+                                <h4>The Universal Cure</h4>
+                                <p><i>Artiste: </i>Jah Cure</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="17">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/reggae06.jpg" alt="Sound of Change">
+                            <div class="prize">12.99 €</div>
+                            <div class="caption">
+                                <h4>Sound of Change</h4>
+                                <p><i>Artiste: </i>Dirty Heads</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="18">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+            <div class="tab-pane " id="1">
+            <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock01.jpg" alt="The Joshua Tree">
+                            <div class="prize">16.99 €</div>
+                            <div class="caption">
+                                <h4>The Joshua Tree</h4>
+                                <p><i>Artiste: </i>U2</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="1">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock02.jpg" alt="Greatest Hits: I II & III">
+                            <div class="prize">18.99 €</div>
+                            <div class="caption">
+                                <h4>Greatest Hits: I II & III</h4>
+                                <p><i>Artiste: </i>Queen</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="2">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock03.jpg" alt="Meteora">
+                            <div class="prize">4.99 €</div>
+                            <div class="caption">
+                                <h4>Meteora</h4>
+                                <p><i>Artiste: </i>Linkin Park</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="3">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock04.jpg" alt="American Idiot">
+                            <div class="prize">5.99 €</div>
+                            <div class="caption">
+                                <h4>American Idiot</h4>
+                                <p><i>Artiste: </i>Green Day</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="4">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock05.jpg" alt="Toxicity">
+                            <div class="prize">7.99 €</div>
+                            <div class="caption">
+                                <h4>Toxicity</h4>
+                                <p><i>Artiste: </i>System of a Down</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="5">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                        <div class="thumbnail">
+                            <img src="images/rock06.jpg" alt="Time Capsule">
+                            <div class="prize">3.99 €</div>
+                            <div class="caption">
+                                <h4>Time Capsule</h4>
+                                <p><i>Artiste: </i>The B-52s</p>
+                                <button type="button" class="btn btn-order button-modal" data-album="6">
+                                    Voir le détail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $(document).on("click", "button.button-modal", function(){
+        var data = "album="+$(this).attr("data-album");
+        var modal = $("#modal");
+        $.ajax({
+            url: "view.php",
+            type: "GET",
+            dataType: 'json',
+            data: data,
+            success: function(result) {
+                $(modal).find(".modal-title").html(result['name']);
+                $(modal).find(".image").attr("src", "images/"+result['image']);
+                $(modal).find(".prize").html(result['price'] + " €");
+                $(modal).find(".titre").html(result['name']);
+                $(modal).find(".annee").html(result['year']);
+                $(modal).find(".artist").html(result['artist']);
+                $(modal).find(".format").html(result["format"]);
+                $(modal).modal("show");
+            }
+        });
+    });
+</script>
+</body>
+</html>
