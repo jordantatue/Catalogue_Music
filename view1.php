@@ -1,15 +1,16 @@
 <?php
 require 'admin/database.php';
+
 if (!empty($_GET['id'])) {
     $id = checkInput($_GET['id']);
 }
 
 $db = Database::connect();
-$statement = $db->prepare('SELECT albums.id, albums.name, albums.artist,albums.price,albums.image,genres.name AS genre FROM albums INNER JOIN genres ON albums.genre=genres.id
+$statement = $db->prepare('SELECT albums.id,albums.name,albums.artist,albums.price,albums.image,genres.name AS genre FROM albums LEFT JOIN genres ON albums.genre=genres.id
 WHERE albums.id=?');
 $statement->execute(array($id));
 $item = $statement->fetch();
-Database::disconnect();
+/*Database::disconnect();*/
 
 function checkInput($data)
 {
@@ -20,17 +21,14 @@ function checkInput($data)
 }
 
 ?>
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="">
 
 <head>
     <title>view</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
 </head>

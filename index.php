@@ -13,33 +13,6 @@
 </head>
 
 <body class="container">
-    <div class="modals">
-        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="thumbnail">
-                            <img class="image" src="" alt="">
-                            <div class="prize"></div>
-                            <div class="caption">
-                                <h4><span class="titre"></span> (<span class="annee"></span>)</h4>
-                                <p><i>Artiste: </i><b class="artist"></b></p>
-                                <p class="description"></p>
-                                <p><a class="btn btn-order" role="button" href="#">Acheter</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container site">
         <?php
         require 'admin/database.php';
@@ -81,9 +54,9 @@
                         <img src="images/' . $item['image']  . '" alt="Turn Up the Quiet">
                             <div class="prize">' . number_format((float)$item['price'], 2, '.', '') . ' €</div>
                             <div class="caption">
-                                <h4>Turn Up the Quiet</h4>
+                                <h4>' . $item['name'] . '</h4>
                                 <p><i>Artiste: </i>' . $item['artist'] . '</p>
-                                <a href ="view ::article('.$item['id'].')" ><button id = "' . $item['id']  . '" type="button" class="btn btn-order button-modal" data-album="20">
+                                <a href="view.php?id=' . $item['id'] . '"><button type="button" class="btn btn-order button-modal" data-album="' . $item['id'] . '">
                                     Voir le détail
                                 </button></a>
                             </div>
@@ -93,6 +66,37 @@
             echo '</div>
                     </div>';
         }
+
+        $statement = $db->query("SELECT*FROM albums");
+        $items = $statement->fetchAll();
+        foreach ($items as $item) {
+            echo '<div class="modals">';
+            echo ' <div class="modal fade" id="elt' . $item['id'] . '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
+            echo '    <div class="modal-dialog" role="document">';
+            echo '<div class="modal-content">';
+            echo '<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="' . $item['id'] . '">' . $item['image'] . '</h4>
+            </div>';
+            echo '<div class="modal-body">
+                <div class="thumbnail">';
+            echo '<img class="image" src="images/' . $item['image'] . '" alt="">';
+            echo '<div class="prize">' . $item['price'] . '€</div>
+                        <div class="caption">';
+            echo '<h4><span class="titre">' . $item['name'] . '</span> (<span class="annee">' . $item['year'] . '</span>)</h4>';
+            echo '<p><i>Artiste: </i><b class="artist">' . $item['artist'] . '</b></p>';
+            echo '<p class="description"></p>
+                            <p><a class="btn btn-order" role="button" href="#">Acheter</a></p>
+                        </div>
+                    </div>
+                </div>';
+            echo '<div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>';
+            echo '</div>
+           </div>
+       </div></div>';
+        }
         Database::disconnect();
         echo '</div>';
         ?>
@@ -101,35 +105,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).on("click", "button.btn", function() {
-            alert('clike');
-            echo();
-        });
-    </script>
 
-    <script>
-        $(document).on("click", "button.btn", function() {
-            var data = "album=" + $(this).attr("data-album");
-            var modal = $("#modal");
-            $.ajax({
-                url: "view.php",
-                type: "GET",
-                dataType: 'json',
-                data: data,
-                success: function(result) {
-                    $(modal).find(".modal-title").html(result['name']);
-                    $(modal).find(".image").attr("src", "images/" + result['image']);
-                    $(modal).find(".prize").html(result['price'] + " €");
-                    $(modal).find(".titre").html(result['name']);
-                    $(modal).find(".annee").html(result['year']);
-                    $(modal).find(".artist").html(result['artist']);
-                    $(modal).find(".format").html(result["format"]);
-                    $(modal).modal("show");
-                }
-            });
-        });
-    </script>
 
 
 </body>
